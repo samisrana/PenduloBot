@@ -194,7 +194,7 @@ int main(void)
 	  uint16_t   actuation = 0;
 	  uint16_t   direction = 0;
 
-	  // Step 1: Read inputs from the sensor (gyroscope only), and print the values on UART_2
+	  // Read inputs from the sensor (gyroscope only), and print the values on UART_2
 	  MPU6050_Read_All(&sensorData);         // Read data
 	  ExponentialFilter(&sensorData);        // Filter data
 
@@ -202,7 +202,7 @@ int main(void)
 	  sprintf(printString, "X: 0x%04x, Y: 0x%04x, Y: 0x%04x\r\n", sensorData.Gyro_X, sensorData.Gyro_Y, sensorData.Gyro_Z);
       HAL_UART_Transmit(&huart2, (uint8_t*)printString, strlen(printString), HAL_MAX_DELAY);
 
-      // Step 2: Calculate error from the set point (middle of Z-axis, since the pendulum robot moves and tries to
+      // Calculate error from the set point (middle of Z-axis, since the pendulum robot moves and tries to
       //         balance on Z-axis (perpendicular to the MPU-6050 PCB plane). For now, keep both motors at the same
       //         speed/ direction.
       errorValue = Z_AXIS_SETPOINT - filteredSensorData.Gyro_Z;

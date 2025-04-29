@@ -1,0 +1,62 @@
+#include "mpu6050.h"
+
+HAL_StatusTypeDef MPU6050_Init(void)
+{
+    uint8_t check;
+    uint8_t data;
+
+    // Try to Read WHO_AM_I register
+    HAL_StatusTypeDef status;
+
+//    status = HAL_I2C_Mem_Read(&hi2c1, MPU6050_ADDR, MPU6050_REG_WHO_AM_I, 1, &check, 1, 100); // 100ms timeout instead of HAL_MAX_DELAY
+    status = HAL_I2C_Mem_Read(&hi2c1, 0xD0<<1, MPU6050_REG_WHO_AM_I, 1, &check, 1, 100); // 100ms timeout instead of HAL_MAX_DELAY
+
+    if (status != HAL_OK)
+    {
+        // Couldn't even talk to MPU6050
+        return HAL_ERROR;
+    }
+
+    if (check != 0x68)
+    {
+        // Wrong device ID
+        return HAL_ERROR;
+    }
+
+    // Wake up the MPU6050, write 0 to PWR_MGMT_1
+    data = 0;
+    status = HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, MPU6050_REG_PWR_MGMT_1, 1, &data, 1, 100);
+
+    if (status != HAL_OK)
+    {
+        return HAL_ERROR;
+    }
+
+    return HAL_OK;
+}
+
+
+HAL_StatusTypeDef MPU6050_Read_All(MPU6050_Data *data)
+{
+    uint8_t buf[14];
+
+    if (HAL_I2C_Mem_Read(&hi2c1, MPU6050_ADDR, MPU6050_REG_ACCEL_XOUT_H, 1, buf, 14, HAL_MAX_DELAY) != HAL_OK) {
+        return HAL_ERROR;
+    }
+
+    data->Accel_X = (int16_t)(buf[0] << 8 | buf[1]);
+    data->Accel_Y = (int16_t)(buf[2] << 8 | buf[3]);
+    data->Accel_Z = (int16_t)(buf[4] << 8 | buf[5]);
+    data->Gyro_X  = (int16_t)(buf[8] << 8 | buf[9]);
+    data->Gyro_Y  = (int16_t)(buf[10] << 8 | buf[11]);
+    data->Gyro_Z  = (int16_t)(buf[12] << 8 | buf[13]);
+
+    return HAL_OK;
+}
+
+uint8_t MPU6050_Read_WhoAmI(void)
+{
+    uint8_t who_am_i = 0;
+    HAL_I2C_Mem_Read(&hi2c1, MPU6050_ADDR, MPU6050_REG_WHO_AM_I, 1, &who_am_i, 1, HAL_MAX_DELAY);
+    return who_am_i;
+}

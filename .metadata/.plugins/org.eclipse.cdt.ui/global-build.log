@@ -66,3 +66,492 @@ Finished building: default.size.stdout
  
 Finished building: PenduloBot.list
  
+10:30:43 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lqr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lqr.d" -MT"Core/Src/lqr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lqr.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21820	     92	   2228	  24140	   5e4c	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:20:51 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lqr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lqr.d" -MT"Core/Src/lqr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lqr.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21820	     92	   2228	  24140	   5e4c	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:23:20 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21844	     92	   2228	  24164	   5e64	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:23:25 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21844	     92	   2228	  24164	   5e64	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:25:35 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21820	     92	   2228	  24140	   5e4c	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:25:38 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21820	     92	   2228	  24140	   5e4c	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:29:27 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21872	     92	   2228	  24192	   5e80	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:29:31 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21872	     92	   2228	  24192	   5e80	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:32:15 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21876	     92	   2228	  24196	   5e84	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:32:18 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21876	     92	   2228	  24196	   5e84	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:32:51 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  10248	     12	   1708	  11968	   2ec0	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:32:59 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10248	     12	   1708	  11968	   2ec0	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:33:17 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21876	     92	   2228	  24196	   5e84	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:33:23 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21876	     92	   2228	  24196	   5e84	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:37:30 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f3xx_hal_msp.o: in function `HAL_UART_MspInit':
+C:/Users/samid/STM32CubeIDE/PenduloBot/PenduloBot/Debug/../Core/Src/stm32f3xx_hal_msp.c:238: multiple definition of `HAL_UART_MspInit'; ./Core/Src/main.o:C:/Users/samid/STM32CubeIDE/PenduloBot/PenduloBot/Debug/../Core/Src/main.c:526: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: PenduloBot.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:37:56 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_MspInit':
+../Core/Src/main.c:528:12: error: invalid type argument of '->' (have 'UART_HandleTypeDef' {aka 'struct __UART_HandleTypeDef'})
+  528 |   if(huart2->Instance==USART2)
+      |            ^~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:39:25 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_MspInit':
+../Core/Src/main.c:528:12: error: invalid type argument of '->' (have 'UART_HandleTypeDef' {aka 'struct __UART_HandleTypeDef'})
+  528 |   if(huart2->Instance==USART2)
+      |            ^~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:39:38 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f3xx_hal_msp.o: in function `HAL_UART_MspInit':
+C:/Users/samid/STM32CubeIDE/PenduloBot/PenduloBot/Debug/../Core/Src/stm32f3xx_hal_msp.c:238: multiple definition of `HAL_UART_MspInit'; ./Core/Src/main.o:C:/Users/samid/STM32CubeIDE/PenduloBot/PenduloBot/Debug/../Core/Src/main.c:526: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: PenduloBot.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:44:27 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f3xx_hal_msp.d" -MT"Core/Src/stm32f3xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_hal_msp.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21808	     92	   2228	  24128	   5e40	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:44:34 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21808	     92	   2228	  24128	   5e40	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:46:49 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f3xx_hal_msp.d" -MT"Core/Src/stm32f3xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_hal_msp.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21808	     92	   2228	  24128	   5e40	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:46:53 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21808	     92	   2228	  24128	   5e40	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:50:29 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21844	     92	   2228	  24164	   5e64	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+12:50:33 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21844	     92	   2228	  24164	   5e64	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+12:58:30 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+../Core/Src/mpu6050.c: In function 'MPU6050_Init':
+../Core/Src/mpu6050.c:7:24: error: 'huart2' undeclared (first use in this function)
+    7 |     HAL_UART_Transmit(&huart2, (uint8_t*)"test!\r\n", strlen("test!\r\n"), HAL_MAX_DELAY);
+      |                        ^~~~~~
+../Core/Src/mpu6050.c:7:24: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/mpu6050.c:7:55: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+    7 |     HAL_UART_Transmit(&huart2, (uint8_t*)"test!\r\n", strlen("test!\r\n"), HAL_MAX_DELAY);
+      |                                                       ^~~~~~
+../Core/Src/mpu6050.c:2:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    1 | #include "mpu6050.h"
+  +++ |+#include <string.h>
+    2 | 
+../Core/Src/mpu6050.c:7:55: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
+    7 |     HAL_UART_Transmit(&huart2, (uint8_t*)"test!\r\n", strlen("test!\r\n"), HAL_MAX_DELAY);
+      |                                                       ^~~~~~
+../Core/Src/mpu6050.c:7:55: note: include '<string.h>' or provide a declaration of 'strlen'
+make: *** [Core/Src/subdir.mk:40: Core/Src/mpu6050.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:04:55 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+13:04:58 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+13:18:59 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lqr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lqr.d" -MT"Core/Src/lqr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lqr.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f3xx_hal_msp.d" -MT"Core/Src/stm32f3xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_hal_msp.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+13:19:05 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+13:24:30 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lqr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lqr.d" -MT"Core/Src/lqr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lqr.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f3xx_hal_msp.d" -MT"Core/Src/stm32f3xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_hal_msp.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+13:28:41 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lqr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lqr.d" -MT"Core/Src/lqr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lqr.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f3xx_hal_msp.d" -MT"Core/Src/stm32f3xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_hal_msp.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+13:32:39 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+13:32:44 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+14:01:43 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lqr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lqr.d" -MT"Core/Src/lqr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lqr.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc "../Core/Src/stm32f3xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f3xx_hal_msp.d" -MT"Core/Src/stm32f3xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_hal_msp.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+14:01:49 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+14:02:27 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+14:05:44 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+14:05:47 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+14:06:15 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+14:06:19 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+14:06:48 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 
+14:06:51 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-size  PenduloBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+14:07:15 **** Incremental Build of configuration Debug for project PenduloBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/mpu6050.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpu6050.d" -MT"Core/Src/mpu6050.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mpu6050.o"
+arm-none-eabi-gcc -o "PenduloBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\samid\STM32CubeIDE\PenduloBot\PenduloBot\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PenduloBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PenduloBot.elf
+ 
+arm-none-eabi-size  PenduloBot.elf 
+arm-none-eabi-objdump -h -S PenduloBot.elf  > "PenduloBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  21964	     92	   2228	  24284	   5edc	PenduloBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: PenduloBot.list
+ 

@@ -5,22 +5,36 @@ HAL_StatusTypeDef MPU6050_Init(void)
     uint8_t check;
     uint8_t data;
 
-    // Read WHO_AM_I register
-    HAL_I2C_Mem_Read(&hi2c1, MPU6050_ADDR, MPU6050_REG_WHO_AM_I, 1, &check, 1, HAL_MAX_DELAY);
+    // Try to Read WHO_AM_I register
+    HAL_StatusTypeDef status;
 
-    if (check != 0x68) {
-        // Device not found
+//    status = HAL_I2C_Mem_Read(&hi2c1, MPU6050_ADDR, MPU6050_REG_WHO_AM_I, 1, &check, 1, 100); // 100ms timeout instead of HAL_MAX_DELAY
+    status = HAL_I2C_Mem_Read(&hi2c1, 0xD0<<1, MPU6050_REG_WHO_AM_I, 1, &check, 1, 100); // 100ms timeout instead of HAL_MAX_DELAY
+
+    if (status != HAL_OK)
+    {
+        // Couldn't even talk to MPU6050
+        return HAL_ERROR;
+    }
+
+    if (check != 0x68)
+    {
+        // Wrong device ID
         return HAL_ERROR;
     }
 
     // Wake up the MPU6050, write 0 to PWR_MGMT_1
     data = 0;
-    if (HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, MPU6050_REG_PWR_MGMT_1, 1, &data, 1, HAL_MAX_DELAY) != HAL_OK) {
+    status = HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, MPU6050_REG_PWR_MGMT_1, 1, &data, 1, 100);
+
+    if (status != HAL_OK)
+    {
         return HAL_ERROR;
     }
 
     return HAL_OK;
 }
+
 
 HAL_StatusTypeDef MPU6050_Read_All(MPU6050_Data *data)
 {

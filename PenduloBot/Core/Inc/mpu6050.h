@@ -7,7 +7,8 @@
 extern I2C_HandleTypeDef hi2c1;
 
 // MPU6050 device address
-#define MPU6050_ADDR 0x68 << 1 // Shifted for HAL which expects 8-bit address
+//#define MPU6050_ADDR 0x68 << 1 // Shifted for HAL which expects 8-bit address
+#define MPU6050_ADDR 0xD2
 
 // MPU6050 Registers
 #define MPU6050_REG_PWR_MGMT_1  0x6B

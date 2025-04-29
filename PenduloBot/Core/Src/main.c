@@ -170,15 +170,30 @@ int main(void)
   MX_TIM1_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
+
   /* USER CODE BEGIN 2 */
 
   // Initialize MPU-6050 IMU chip
-  MPU6050_Init();
+
+  HAL_UART_Transmit(&huart2, (uint8_t*)"Starting MPU6050 Init...\r\n", strlen("Starting MPU6050 Init...\r\n"), HAL_MAX_DELAY);
+
+  if (MPU6050_Init() == HAL_OK)
+  {
+      HAL_UART_Transmit(&huart2, (uint8_t*)"MPU6050 Init done!\r\n", strlen("MPU6050 Init done!\r\n"), HAL_MAX_DELAY);
+  }
+  else
+  {
+      HAL_UART_Transmit(&huart2, (uint8_t*)"MPU6050 Init FAILED!\r\n", strlen("MPU6050 Init FAILED!\r\n"), HAL_MAX_DELAY);
+  }
+
 
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+
+  HAL_UART_Transmit(&huart2, (uint8_t*)"System Initialized. Hello World!\r\n", strlen("System Initialized. Hello World!\r\n"), HAL_MAX_DELAY);
+
 
 
   /* USER CODE END 2 */
@@ -200,6 +215,7 @@ int main(void)
 	  // formulate the string with three gyroscope axis, and print it.
 	  sprintf(printString, "X: 0x%04x, Y: 0x%04x, Z: 0x%04x\r\n", sensorData.Gyro_X, sensorData.Gyro_Y, sensorData.Gyro_Z);
       HAL_UART_Transmit(&huart2, (uint8_t*)printString, strlen(printString), HAL_MAX_DELAY);
+
 
       // Calculate error from the set point (middle of Z-axis, since the pendulum robot moves and tries to
       // balance on Z-axis (perpendicular to the MPU-6050 PCB plane). For now, keep both motors at the same
