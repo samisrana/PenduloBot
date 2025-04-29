@@ -1,0 +1,23 @@
+# Ignore build output
+/Debug/
+/Release/
+/build/
+*.o
+*.d
+*.su
+*.elf
+*.map
+*.list
+*.cyclo
+*.launch
+
+# IDE files
+.cproject
+.project
+.settings/
+
+# Other
+*.bak
+*.swp
+*.tmp
+

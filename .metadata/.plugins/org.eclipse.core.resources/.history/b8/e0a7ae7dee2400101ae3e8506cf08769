@@ -1,0 +1,37 @@
+#include "lqr.h"
+#include <math.h>
+
+// MPU6050 constants
+#define GYRO_SENSITIVITY 131.0f    // LSB/deg/s (±250 dps full scale)
+#define DT_SECONDS       0.01f     // Loop period in seconds (100 Hz)
+
+// LQR gain constants
+static const float K_ANGLE = 50.0f;    // rad
+static const float K_RATE  = 1.5f;     // rad/s
+
+// Limits
+#define ACTUATION_MAX 65535.0f
+#define ACTUATION_MIN 0.0f
+
+// Internal angle tracker
+static float angle_rad = 0.0f;
+
+float estimate_tilt_angle(int16_t gyro_y_raw)
+{
+    // Convert gyro raw to radians/sec
+    float gyro_y_rad_s = ((float)gyro_y_raw / GYRO_SENSITIVITY) * (M_PI / 180.0f);
+    angle_rad += gyro_y_rad_s * DT_SECONDS;
+    return angle_rad;
+}
+
+uint16_t LQR_Controller(float angle_rad_input, float angular_velocity_rad_s)
+{
+    float u = -(K_ANGLE * angle_rad_input + K_RATE * angular_velocity_rad_s);
+
+    // Ensure positive PWM actuation
+    float actuation = fabsf(u);
+    if (actuation > ACTUATION_MAX)
+        actuation = ACTUATION_MAX;
+
+    return (uint16_t)actuation;
+}
